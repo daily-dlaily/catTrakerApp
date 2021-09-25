@@ -1,8 +1,8 @@
-import firebase from "firebase/app"
-import "firebase/firestore"
-import "firebase/auth"
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
-const firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyAJCOXk1wIkNnfRa6JCg4n9qJpEGUJX2-M",
     authDomain: "cat-tracker-c3947.firebaseapp.com",
     projectId: "cat-tracker-c3947",
@@ -12,7 +12,7 @@ const firebaseConfig = {
   };
 
   // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-firebaseConfig.firestore();
+firebase.initializeApp(firebaseConfig);
+firebase.firestore();
 
 export default firebase;

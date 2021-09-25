@@ -1,9 +1,11 @@
 import {combineReducers} from "redux";
-import { FirebaseReducer, firebaseReducer, FirestoreReducer } from "react-redux-firebase";
+import {  firebaseReducer } from "react-redux-firebase";
 import { firestoreReducer } from "redux-firestore";
+import catReducer from "./catReducer";
 const rootReducer = combineReducers({
-    firebase: FirebaseReducer,
-    firestore: FirestoreReducer,
+    firebase: firebaseReducer,
+    firestore: firestoreReducer,
+    cat : catReducer,
 });
 
 export default rootReducer;

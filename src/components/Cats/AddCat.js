@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addCat } from '../../actions/AppActions';
 
-export default class AddCat extends Component {
+class AddCat extends Component {
     state = {
-        email : "",
-        password :"",
+        cat : "",
+     
     };
     handleChange = (e) =>{
         this.setState({
@@ -13,6 +15,7 @@ export default class AddCat extends Component {
 
     handleSubmit = (e)=>{
         e.preventDefault();
+        this.props.addCat(this.state)
         console.log(this.state);
     }
     render() {
@@ -41,3 +44,10 @@ export default class AddCat extends Component {
         )
     }
 }
+const mapDispatchToProps = dispatch => {
+    return{
+        addCat: cat => dispatch(addCat(cat))
+    };
+};
+
+export default connect(null, mapDispatchToProps)(AddCat)

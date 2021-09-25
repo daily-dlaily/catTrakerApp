@@ -14,7 +14,7 @@ const rrfProps = {
   firebase,
   config: {},
   dispatch: store.dispatch,
-  createFirebaseInstance
+  createFirebaseInstance,
 } 
 ReactDOM.render(
   <React.StrictMode>

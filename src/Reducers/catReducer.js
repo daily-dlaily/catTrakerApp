@@ -13,6 +13,14 @@ const catReducer = (state = initialState, action) => {
             toast.error("An error occurred");
             return state;
         }
+        case "REMOVE_CAT": {
+            console.log("A cat was removed...");
+            return state;
+          }
+          case "REMOVE_CAT_ERR": {
+            console.log("A cat remove error occured....");
+            return state;
+          }
         default: 
             return state;
     }

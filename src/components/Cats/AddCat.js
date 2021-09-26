@@ -23,7 +23,7 @@ class AddCat extends Component {
         return (
             <div>
                 <form
-                    id="addTaskForm"
+                    id="addCatForm"
                     className="container"
                     autoComplete="off"
                     style={{ marginTop: "38px" }}

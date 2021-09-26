@@ -4,16 +4,19 @@ import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import Dashboard from './components/dashboard/Dashboard';
 import NavBar from './components/layout/NavBar';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-        
+      <ToastContainer />
         <NavBar/>
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
         <Route path="/" exact component={Dashboard} />
+        
       </BrowserRouter>
     </div>
   );

@@ -26,7 +26,8 @@ class SignUp extends Component {
     const { uid } = this.props;
     if (uid) return <Redirect to="/" />;
     return (
-      <>
+      <div className =" row d-flex justify-content-center ">
+          <div className ="col-6">
         <form
           className="container"
           autoComplete="off"
@@ -55,11 +56,12 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary my-3">
             SignUp
           </button>
         </form>
-      </>
+        </div>
+      </div>
     );
   }
 }

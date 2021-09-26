@@ -42,7 +42,7 @@ class AddCat extends Component {
                         />
                     </div>
 
-                    <button type="submit" className="btn btn-primary" style={{ marginTop: "20px" }}>Add</button>
+                    <button type="submit" className="btn btn-primary my-3" style={{ marginTop: "20px" }}>Add</button>
 
                 </form>
             </div>

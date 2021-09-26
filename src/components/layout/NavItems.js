@@ -12,14 +12,14 @@ const NavItems = ({ signOut, uid }) => {
       );
     } else {
       return (
-        <>
+        <div>
           <Link to="/signup" className="nav-link">
             Sign Up
           </Link>
           <Link to="/signin" className="nav-link">
             Sign In
           </Link>
-        </>
+        </div>
       );
     }
   };

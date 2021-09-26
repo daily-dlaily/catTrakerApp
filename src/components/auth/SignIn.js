@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 
 
 
+
 class SignIn extends Component {
     state = {
       email: "",
@@ -27,18 +28,19 @@ class SignIn extends Component {
       const { uid } = this.props;
        if(uid) return <Redirect to="/"/>
       return (
-        <>
+        <div className =" row d-flex justify-content-center ">
+          <div className ="col-6">
           <form
-            className="container"
+            
             autoComplete="off"
             style={{ marginTop: "30px" }}
             onSubmit={this.handleSubmit}
           >
             <legend>
-              {" "}
+              
               <h4>Sign In</h4>
             </legend>
-            <div className="form-group">
+            <div className="form-group ">
               <label htmlFor="email">Enter Email</label>
               <input
                 type="email"
@@ -47,20 +49,21 @@ class SignIn extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className="form-group">
+            <div className="form-group  ">
               <label htmlFor="password">Enter Password</label>
               <input
                 type="password"
-                className="form-control"
+                className="form-control "
                 id="password"
                 onChange={this.handleChange}
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary my-3">
               SignIn
             </button>
           </form>
-          </>
+          </div>
+          </div>
       );
     }
   }

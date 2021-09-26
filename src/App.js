@@ -11,8 +11,9 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-      <ToastContainer />
+      
         <NavBar/>
+        <ToastContainer />
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
         <Route path="/" exact component={Dashboard} />

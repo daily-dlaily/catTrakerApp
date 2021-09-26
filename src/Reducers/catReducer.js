@@ -14,11 +14,11 @@ const catReducer = (state = initialState, action) => {
             return state;
         }
         case "REMOVE_CAT": {
-            console.log("A cat was removed...");
+           toast.info("A cat was removed...");
             return state;
           }
           case "REMOVE_CAT_ERR": {
-            console.log("A cat remove error occured....");
+            toast.error("A cat remove error occured....");
             return state;
           }
           case "TOGGLE_CHECKED": {

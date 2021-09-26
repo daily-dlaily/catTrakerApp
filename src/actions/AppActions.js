@@ -1,5 +1,5 @@
 export const addCat = (cat) =>{
-    return(dispatch, getState, { getFirebase }) =>{
+    return(dispatch, getState, {getFirebase}) =>{
         const firestore = getFirebase().firestore();
         firestore
             .collection("cats")
@@ -8,6 +8,7 @@ export const addCat = (cat) =>{
                 date: new Date(),
             })
             .then(()=> {
+                console.log("Then it was done");
                 dispatch({
                     type:"ADD_CAT",
                     cat,
@@ -21,3 +22,4 @@ export const addCat = (cat) =>{
             });
     };
 };
+

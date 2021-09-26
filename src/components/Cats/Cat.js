@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import moment from 'moment';
 
-function Cat() {
+function Cat({cat}) {
     return (
         <>
             <tr>
-                <th >TouTou </th>
-                <td>12/12/2021</td>
+                <th >{cat.cat}</th>
+                <td>{moment(cat.date.toDate()).calendar()}</td>
                 <td>Vaccinated</td>
                 <td>
                     <span className="material-icons " style={{cursor:"pointer"}}>

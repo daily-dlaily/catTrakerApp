@@ -4,7 +4,7 @@ import { addCat } from '../../actions/AppActions';
 
 class AddCat extends Component {
     state = {
-        cat : "",
+        cat: "",
      
     };
     handleChange = (e) =>{
@@ -15,38 +15,41 @@ class AddCat extends Component {
 
     handleSubmit = (e)=>{
         e.preventDefault();
-        this.props.addCat(this.state)
-        console.log(this.state);
+        this.props.addCat(this.state);
+        document.getElementById("addTaskForm").reset();
+        console.log('i m in the addacat',this.state);
     }
     render() {
         return (
             <div>
                 <form
-                 className = "container" 
-                 autoComplete="off" 
-                 style = {{marginTop: "38px"}}
-                 onSubmit = {this.handleSubmit}
-                 >
-                    <legend>
-                        {" "}
-                        <h4>New Cat</h4>
-                    </legend>
+                    id="addTaskForm"
+                    className="container"
+                    autoComplete="off"
+                    style={{ marginTop: "38px" }}
+                    onSubmit={this.handleSubmit}
+                >
+                    <legend> </legend>
                     <div className="form-group">
-                        <label htmlFor="name">Enter your new cat's name</label>
-                        <input type="name" className="form-control" id="name"  placeholder="Name" onChange={this.handleChange}/>
+                        <label htmlFor="cat">Add a cat</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="cat"
+                            onChange={this.handleChange}
+                        />
                     </div>
-                    
-                   
-                    <button type="submit" className="btn btn-primary" style = {{marginTop: "20px"}}>Add</button>
-                    
+
+                    <button type="submit" className="btn btn-primary" style={{ marginTop: "20px" }}>Add</button>
+
                 </form>
             </div>
         )
     }
 }
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
     return{
-        addCat: cat => dispatch(addCat(cat))
+        addCat: (cat) => dispatch(addCat(cat))
     };
 };
 

@@ -14,7 +14,7 @@ function CatsList({ cats}) {
                     <tr className= "text-info">
                         <th scope="col">Name</th>
                         <th scope="col">Adopted On</th>
-                        <th scope="col">Status</th>
+                        <th scope="col">vaccine</th>
                         <th scope="col">Remove</th>
                     </tr>
                 </thead>

@@ -21,6 +21,14 @@ const catReducer = (state = initialState, action) => {
             console.log("A cat remove error occured....");
             return state;
           }
+          case "TOGGLE_CHECKED": {
+            toast.info("A cat vaccination status changed...");
+            return state;
+          }
+          case "TOGGLE_CHECKED_ERR": {
+            toast.error("A cat vaccination status change error occured...");
+            return state;
+          }
         default: 
             return state;
     }

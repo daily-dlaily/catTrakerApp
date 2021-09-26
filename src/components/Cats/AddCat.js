@@ -5,6 +5,8 @@ import { addCat } from '../../actions/AppActions';
 class AddCat extends Component {
     state = {
         cat: "",
+        checked: "false",
+
      
     };
     handleChange = (e) =>{
@@ -17,7 +19,7 @@ class AddCat extends Component {
         e.preventDefault();
         this.props.addCat(this.state);
         document.getElementById("addTaskForm").reset();
-        console.log('i m in the addacat',this.state);
+        
     }
     render() {
         return (

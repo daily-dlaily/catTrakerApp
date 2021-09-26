@@ -18,7 +18,7 @@ class AddCat extends Component {
     handleSubmit = (e)=>{
         e.preventDefault();
         this.props.addCat(this.state);
-        document.getElementById("addTaskForm").reset();
+        document.getElementById("addCatForm").reset();
         
     }
     render() {

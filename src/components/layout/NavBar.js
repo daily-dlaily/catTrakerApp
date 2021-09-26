@@ -12,4 +12,8 @@ function NavBar() {
     )
 }
 
+// const mapStateToProps = (state) => {
+//     console.log(state);
+//   };
+
 export default NavBar

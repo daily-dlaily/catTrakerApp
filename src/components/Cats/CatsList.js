@@ -32,14 +32,16 @@ const mapStateToProps = (state) => {
     const cats = state.firestore.ordered.cats;
     return {
       cats: cats,
+      uid: state.firebase.auth.uid,
     };
     
   };
   export default compose(
     connect(mapStateToProps),
-    firestoreConnect(() => [
+    firestoreConnect((ownProps) => [
       {
         collection: "cats",
+        where: ["authorId", "==", ownProps.uid],
         orderBy: ["date", "desc"],
         
       },
